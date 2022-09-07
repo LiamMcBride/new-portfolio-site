@@ -1,0 +1,27 @@
+:root {
+    --backColor: #363636;
+    --lightGray: #464646;
+    --green: #55FF8F;
+}
+
+body {
+    background-color: var(--backColor);
+    padding: 0;
+    margin: 0;
+}
+
+main {
+
+}
+
+h1 {
+    color: var(--green);
+}
+
+.side-bar{
+    height: 100vh;
+    width: 150px;
+    background-color: red;
+    margin: 0;
+    
+}
