@@ -2,6 +2,7 @@
     --backColor: #363636;
     --lightGray: #464646;
     --green: #55FF8F;
+    --dark-green: #3AB162;
     --white: #D8D8D8;
 }
 
@@ -16,23 +17,78 @@ body {
 
 }
 
+p{
+    color: var(--white);
+    font-size: 20px;
+}
+
+li{
+    color: var(--white);
+    font-size: 20px;
+}
+
+.highlight-text{
+    color: var(--green);
+}
+
+main{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.page{
+    width: 50vw;
+    min-width: 800px;
+    max-width: 1200px;
+
+}
+
+a {
+    color: var(--dark-green);
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: var(--green);
+}
+
+.divider-line{
+    width: 100%;
+    height: 3px;
+    background-color: var(--lightGray);
+}
+
 
 .introduction-header{
 
     padding-top: 50px;
     padding-bottom: 50px;
+    /* width: 100%; */
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: auto 100px; 
 
 }
 
+.test-div{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
 .inline-block{
-    display: inline-block;
-    height: 100%;
+    /* display: table;
+    columns: 2;     */
+    /* height: 100%;
     align-items: center;
     height: 200px;
     margin-top: 0px;
     margin: 0;
     padding: 0px;
-    margin-left: 40px;
+    margin-left: 40px; */
 }
 
 .not-inline{
@@ -44,22 +100,42 @@ h1 {
 
 }
 
+h2 {
+    color: var(--white);
+}
+
+
 .avatar{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    background-image: url("./Assets/unnamed.jpg");
+    background-size: 100px;
     background-color: var(--backColor);
     border: 5px solid var(--green);
     display: inline-block;
 }
 
+.project-entry-div{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.project-entry-div img {
+    width: 100%;
+    height: auto;
+}
+
 .intro-title{
     margin-top: 0px;
-    font-size: 48px;
+    font-size: 32px;
     color: var(--white);
 }
 
 .name-title{
-    font-size: 96px;
+    font-size: 64px;
 }
 
 .side-bar{
