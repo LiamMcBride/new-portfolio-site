@@ -6,6 +6,8 @@
     --white: #D8D8D8;
 }
 
+
+
 body {
     background-color: var(--backColor);
     padding: 0px;
@@ -19,7 +21,7 @@ body {
 
 p{
     color: var(--white);
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 li{
@@ -40,7 +42,7 @@ main{
 
 .page{
     width: 50vw;
-    min-width: 800px;
+    /* min-width: 800px; */
     max-width: 1200px;
 
 }
@@ -77,18 +79,6 @@ a:hover {
     height: 100px;
     width: 100px;
     background-color: red;
-}
-
-.inline-block{
-    /* display: table;
-    columns: 2;     */
-    /* height: 100%;
-    align-items: center;
-    height: 200px;
-    margin-top: 0px;
-    margin: 0;
-    padding: 0px;
-    margin-left: 40px; */
 }
 
 .not-inline{
@@ -130,15 +120,15 @@ h2 {
 
 .intro-title{
     margin-top: 0px;
-    font-size: 32px;
+    font-size: 2em;
     color: var(--white);
 }
 
 .name-title{
-    font-size: 64px;
+    font-size: 4em;
 }
 
-.side-bar{
+/* .side-bar{
     position: fixed;
     height: 100vh;
     width: 150px;
@@ -149,7 +139,7 @@ h2 {
     border-right-style: solid;
     margin-top: 0px;
     
-}
+} */
 
 .side-bar-standin{
     display: block;
@@ -162,3 +152,7 @@ h2 {
 .circle{
     border-radius: 50%;
 }
+
+/* @media only screen and (max-device-width : 800px){
+    
+} */
