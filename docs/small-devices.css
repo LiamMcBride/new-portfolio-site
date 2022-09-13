@@ -1,0 +1,17 @@
+.name-title{
+    font-size: 2em;
+}
+
+
+main {
+    display: block;
+}
+
+.page {
+    max-width: 90%;
+    width: 90%;
+}
+
+.project-entry-div{
+    display: block;
+}
