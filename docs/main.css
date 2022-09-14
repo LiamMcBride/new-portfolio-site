@@ -113,6 +113,13 @@ h2 {
     margin-top: 40px;
 }
 
+.project-entry-header {
+    margin-top: none;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .project-entry-div img {
     width: 100%;
     height: auto;
