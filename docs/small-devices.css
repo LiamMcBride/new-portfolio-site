@@ -27,3 +27,7 @@ main {
 .project-entry-div{
     display: block;
 }
+
+.project-entry-header {
+    margin-top: 20px;
+}
