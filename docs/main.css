@@ -6,7 +6,57 @@
     --white: #D8D8D8;
 }
 
+.landing {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.landing div .intro-title {
+    text-align: left;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    font-family: 'Work Sans';
+    color: #fff;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.myButton {
+    border-radius: 28px;
+    border: 1px solid var(--white);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 16px 31px;
+    text-decoration: none;
+    margin: 1.69em auto;
+}
+
+.myButton:hover {
+    background-color:var(--green);
+    color: var(--backColor);
+    border: 1px solid var(--backColor);
+}
+
+.myButton:active {
+    position:relative;
+    top:1px;
+}
 
 body {
     background-color: var(--backColor);
