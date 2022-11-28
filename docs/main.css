@@ -1,12 +1,45 @@
 :root {
     --backColor: #363636;
     --lightGray: #464646;
+    --lighterGray: #5b5b5b;
     --green: #55FF8F;
     --dark-green: #3AB162;
     --white: #D8D8D8;
 }
 
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: var(--lightGray);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: var(--white);
+    font-weight: bold;
 
+}
+
+.nav-tab {
+    /* height: 50%; */
+    float: right;
+    padding: 5px;
+    width: 75px;
+    text-align: center;
+    display: block;
+    user-select: none;
+}
+
+.nav-tab-selected {
+    border-bottom: 4px solid var(--green);
+}
+
+.nav-tab:hover {
+    cursor: pointer;
+    background-color: var(--lighterGray);
+}
 
 body {
     background-color: var(--backColor);
@@ -17,6 +50,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
 }
 
 p{
@@ -66,7 +100,7 @@ a:hover {
 
 .introduction-header{
 
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
     /* width: 100%; */
     display: grid;
