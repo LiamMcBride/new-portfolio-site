@@ -22,6 +22,10 @@
 
 }
 
+.nav-bar a {
+    color: var(--white);
+}
+
 .nav-tab {
     /* height: 50%; */
     float: right;
