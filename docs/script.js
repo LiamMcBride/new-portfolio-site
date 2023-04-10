@@ -448,6 +448,13 @@ function assembleProjectsHTML(data){
     return projects
 }
 
+function resetFilters(){
+    document.getElementById("filter-type").value = "all"
+    document.getElementById("filter-language").value = "all"
+    document.getElementById("filter-framework").value = "all"
+    sortProjects()
+}
+
 function makeProjectHTML(data){
     if(!tags_assembled){
         let types = data["tags"]["type"]
