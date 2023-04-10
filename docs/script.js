@@ -3,7 +3,26 @@ let projects_data = [
         "title": "Stat Binge",
         "description": "This is an on-going project that I'm developing with two friends. It is a react frontend with a Flask API backend. The goal is to create a show ranking website, with social features, lots of statistics, and show recommendations. This is all to get more practice with actually working on production code. The main goal of this project is to launch a site and then to maintain the site as well as worry about security and storing user data and all of those extra tasks that are hard to come accross in regular solo projects.",
         "image": "Assets/stat-binge-photo.png",
-        "links": []
+        "links": [],
+        "tags": {
+            "frameworks": [
+                "React",
+                "Flask",
+                "Figma"
+            ],
+            "languages": [
+                "JavaScript",
+                "css/html",
+                "Python",
+                "SQL"
+            ],
+            "type": [
+                "personal",
+                "web",
+                "design",
+                "database"
+            ]
+        }
     },
     {
         "title": "Perline Noise Map Generation",
@@ -14,7 +33,19 @@ let projects_data = [
                 "name": "View Project on Github",
                 "url": "https://github.com/LiamMcBride/PerlinNoise"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [
+                "Unity"
+            ],
+            "languages": [
+                "C#",
+                "Python"
+            ],
+            "type": [
+                "school"
+            ]
+        }
     },
     {
         "title": "Weather Website",
@@ -29,7 +60,18 @@ let projects_data = [
                 "name": "View Live Project",
                 "url": "./Project_Pages/Weather_Page/weather_page.html"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [],
+            "languages": [
+                "JavaScript",
+                "html/css"
+            ],
+            "type": [
+                "personal",
+                "web"
+            ]
+        }
     },
     {
         "title": "Code Snippets",
@@ -44,7 +86,18 @@ let projects_data = [
                 "name": "View Live Project",
                 "url": "./Project_Pages/Snippet_Page/snippet_page.html"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [],
+            "languages": [
+                "JavaScript",
+                "html/css"
+            ],
+            "type": [
+                "personal",
+                "web"
+            ]
+        }
     },
     {
         "title": "Expense Chart",
@@ -59,7 +112,18 @@ let projects_data = [
                 "name": "View Live Project",
                 "url": "./Project_Pages/Expenses_Chart_Page/expenses_chart.html"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [],
+            "languages": [
+                "JavaScript",
+                "html/css"
+            ],
+            "type": [
+                "personal",
+                "web"
+            ]
+        }
     },
     {
         "title": "Developer Portfolio",
@@ -74,7 +138,18 @@ let projects_data = [
                 "name": "View Live Project",
                 "url": "./Project_Pages/Dev_Portfolio_Page/dev_portfolio.html"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [],
+            "languages": [
+                "JavaScript",
+                "html/css"
+            ],
+            "type": [
+                "personal",
+                "web"
+            ]
+        }
     },
     {
         "title": "Song Grader",
@@ -85,7 +160,23 @@ let projects_data = [
                 "name": "View Project on Github",
                 "url": "https://github.com/LiamMcBride/Song-Ranker"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [
+                "Flask"
+            ],
+            "languages": [
+                "JavaScript",
+                "html/css",
+                "Python",
+                "SQL"
+            ],
+            "type": [
+                "personal",
+                "web",
+                "database"
+            ]
+        }
     },
     {
         "title": "Wordle 64",
@@ -100,7 +191,19 @@ let projects_data = [
                 "name": "View Live Project",
                 "url": "./Project_Pages/Wordle64_Page/wordle64_page.html"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [],
+            "languages": [
+                "JavaScript",
+                "html/css"
+            ],
+            "type": [
+                "personal",
+                "web",
+                "video game"
+            ]
+        }
     },
     {
         "title": "Wordle Solver",
@@ -111,7 +214,16 @@ let projects_data = [
                 "name": "View Project on Github",
                 "url": "https://github.com/LiamMcBride/WordleSolver"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [],
+            "languages": [
+                "Python"
+            ],
+            "type": [
+                "personal",                
+            ]
+        }
     },
     {
         "title": "Code Cracker",
@@ -122,7 +234,16 @@ let projects_data = [
                 "name": "View Project on Github",
                 "url": "https://github.com/LiamMcBride/CodeCracker"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [],
+            "languages": [
+                "Python"
+            ],
+            "type": [
+                "school"
+            ]
+        }
     },
     {
         "title": "Brain Dead",
@@ -133,7 +254,20 @@ let projects_data = [
                 "name": "View Project on Itch.io",
                 "url": "https://bluelettergames.itch.io/brain-dead-pre-alpha-test-2"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [
+                "Unity",
+                "Blender"
+            ],
+            "languages": [
+                "C#"
+            ],
+            "type": [
+                "personal",
+                "video game"
+            ]
+        }
     },
     {
         "title": "Minecraft Clone",
@@ -144,7 +278,20 @@ let projects_data = [
                 "name": "View Project on Itch.io",
                 "url": "https://bluelettergames.itch.io/theta-craft"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [
+                "Asprite",
+                "Unity"
+            ],
+            "languages": [
+                "C#"
+            ],
+            "type": [
+                "school",
+                "video game"
+            ]
+        }
     },
     {
         "title": "Lively Spirit",
@@ -155,7 +302,20 @@ let projects_data = [
                 "name": "View Project on Itch.io",
                 "url": "https://bluelettergames.itch.io/lively-spirit"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [
+                "Unity",
+                "Asprite"
+            ],
+            "languages": [
+                "C#"
+            ],
+            "type": [
+                "personal",
+                "video game"
+            ]
+        }
     },
     {
         "title": "Gatsby Game",
@@ -166,7 +326,20 @@ let projects_data = [
                 "name": "View Project on Itch.io",
                 "url": "https://bluelettergames.itch.io/gatsby-game"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [
+                "Unity",
+                "Asprite"
+            ],
+            "languages": [
+                "C#"
+            ],
+            "type": [
+                "personal",
+                "video game"
+            ]
+        }
     },
     {
         "title": "Crucible",
@@ -177,22 +350,125 @@ let projects_data = [
                 "name": "View Project on Itch.io",
                 "url": "https://bluelettergames.itch.io/the-crucible"
             }
-        ]
+        ],
+        "tags": {
+            "frameworks": [
+                "Unity"
+            ],
+            "languages": [
+                "C#"
+            ],
+            "type": [
+                "personal",
+                "video game"
+            ]
+        }
     }
 ]
 
-console.log(projects_data)
-console.log(assembleProjectsHTML(projects_data))
+let filter_types = []
+let filter_languages = []
+let filter_frameworks = []
+let filters = []
+let tags_assembled = false
 let project_root = document.getElementById("projects_section")
 project_root.innerHTML = assembleProjectsHTML(projects_data)
+
+function assembleFilters(){
+    let tHtml = ``
+    let sBox = document.getElementById("filter-type")
+    filter_types.sort()
+    filter_types.forEach(type => {
+        tHtml += `
+            <option value="${type}">${type}</option>
+        `
+    })
+    sBox.innerHTML += tHtml
+    
+    tHtml = ``
+    sBox = document.getElementById("filter-language")
+    filter_languages.sort()
+    filter_languages.forEach(type => {
+        tHtml += `
+            <option value="${type}">${type}</option>
+        `
+    })
+    sBox.innerHTML += tHtml
+    
+    tHtml = ``
+    sBox = document.getElementById("filter-framework")
+    filter_frameworks.sort()
+    filter_frameworks.forEach(type => {
+        tHtml += `
+            <option value="${type}">${type}</option>
+        `
+    })
+    sBox.innerHTML += tHtml
+}
+
+function sortProjects(){
+    let project_root = document.getElementById("projects_section")
+    project_root.innerHTML = ""
+    project_root.innerHTML = assembleProjectsHTML(projects_data)
+}
+
+function matchesTags(filt, proj){
+    if(filt[0] == "all" || proj["tags"]["type"].includes(filt[0])){
+        if(filt[1] == "all" || proj["tags"]["languages"].includes(filt[1])){
+            if(filt[2] == "all" || proj["tags"]["frameworks"].includes(filt[2])){
+                return true
+            }
+        }   
+    }
+    return false
+}
+
 function assembleProjectsHTML(data){
     var projects = ``
-    projects_data.forEach(proj => 
-        projects += makeProjectHTML(proj))
+    filters = [
+        document.getElementById("filter-type").value,
+        document.getElementById("filter-language").value,
+        document.getElementById("filter-framework").value
+    ]
+    projects_data.forEach(proj => {
+        if(matchesTags(filters, proj)){
+            projects += makeProjectHTML(proj)
+        }
+    })
+    if(!tags_assembled){
+        assembleFilters()
+        tags_assembled = true
+    }
     return projects
 }
 
 function makeProjectHTML(data){
+    if(!tags_assembled){
+        let types = data["tags"]["type"]
+
+        types.forEach(type => {
+            if(!filter_types.includes(type)){
+                filter_types.push(type)
+            }
+        })
+        
+        let languages = data["tags"]["languages"]
+
+        languages.forEach(type => {
+            if(!filter_languages.includes(type)){
+                filter_languages.push(type)
+            }
+        })
+        
+        let frameworks = data["tags"]["frameworks"]
+
+        frameworks.forEach(type => {
+            if(!filter_frameworks.includes(type)){
+                filter_frameworks.push(type)
+            }
+        })
+    }
+
     return `
     <div class="project-entry-div">
     <img src="${data["image"]}" alt="Website page">
@@ -211,7 +487,6 @@ function makeLinksHTML(data){
     var retString = ""
 
     data.forEach(link => {
-        console.log(link)
         var temp = `
         <a style="font-size: 18px" href="${link["url"]}" target="_blank">${link["name"]}</a><br>
         `

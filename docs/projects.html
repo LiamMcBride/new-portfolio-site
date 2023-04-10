@@ -36,12 +36,23 @@
             <h1 class="not-inline name-title">Projects</h1>
         </div>
       </div>
+      <h2>
+        Sort by: Type 
+        <select onchange="sortProjects()" name="type" id="filter-type">
+          <option value="all">all</option>
+        </select>
+        Sort by: Language 
+        <select onchange="sortProjects()" name="language" id="filter-language">
+          <option value="all">all</option>
+        </select>
+        Sort by: Framework 
+        <select onchange="sortProjects()" name="framework" id="filter-framework">
+          <option value="all">all</option>
+        </select>
+
+      </h2>
       <div class="projects-div">
         <h1 id="projects_section">Here's just a little bit of what I've worked on...</h1>                 
-      </div>
-      <div class="articles-div">
-        <h1 id="articles_section">Articles</h1>
-        <a target="_blank" href="https://medium.com/@mailmcbride56/why-you-should-ditch-the-solo-developer-projects-60a770f0e06f">Why you should ditch the solo developer projects.</a>
       </div>
       <div style="height: 200px">
       </div>
