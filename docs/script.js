@@ -370,6 +370,7 @@ let filter_types = []
 let filter_languages = []
 let filter_frameworks = []
 let filters = []
+let item_count = 0
 let tags_assembled = false
 let project_root = document.getElementById("projects_section")
 project_root.innerHTML = assembleProjectsHTML(projects_data)
@@ -425,6 +426,7 @@ function matchesTags(filt, proj){
 
 function assembleProjectsHTML(data){
     var projects = ``
+    item_count = 0
     filters = [
         document.getElementById("filter-type").value,
         document.getElementById("filter-language").value,
@@ -432,6 +434,7 @@ function assembleProjectsHTML(data){
     ]
     projects_data.forEach(proj => {
         if(matchesTags(filters, proj)){
+            item_count += 1
             projects += makeProjectHTML(proj)
         }
     })
@@ -439,6 +442,9 @@ function assembleProjectsHTML(data){
         assembleFilters()
         tags_assembled = true
     }
+    document.getElementById("result-count")
+        .innerText = `${item_count} Results`
+
     return projects
 }
 
