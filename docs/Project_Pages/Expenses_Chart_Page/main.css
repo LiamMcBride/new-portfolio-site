@@ -173,3 +173,8 @@ hr{
     width: 100%;
 }
 
+select {
+    background-color: black;
+    font-size: 32px;
+}
+

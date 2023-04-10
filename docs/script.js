@@ -12,7 +12,7 @@ let projects_data = [
             ],
             "languages": [
                 "JavaScript",
-                "css/html",
+                "html/css",
                 "Python",
                 "SQL"
             ],
