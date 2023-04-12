@@ -59,31 +59,31 @@ let data = {
   "data": [
       {
         "day": "6/25",
-        "amount": 2914
+        "amount": 2600
       },
       {
         "day": "6/26",
-        "amount": 3160
+        "amount": 3100
       },
       {
         "day": "6/27",
-        "amount": 3859
+        "amount": 3800
       },
       {
         "day": "6/28",
-        "amount": 2760
+        "amount": 2700
       },
       {
         "day": "6/29",
-        "amount": 2714.56
+        "amount": 2700
       },
       {
         "day": "6/30",
-        "amount": 2770
+        "amount": 2300
       },
       {
         "day": "7/01",
-        "amount": 1960
+        "amount": 2000
       }
     ]
   };

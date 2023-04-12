@@ -8,7 +8,8 @@ let projects_data = [
             "frameworks": [
                 "React",
                 "Flask",
-                "Figma"
+                "Figma",
+                "API"
             ],
             "languages": [
                 "JavaScript",
@@ -21,6 +22,28 @@ let projects_data = [
                 "web",
                 "design",
                 "database"
+            ]
+        }
+    },
+    {
+        "title": "School Planner App Design",
+        "description": "This project was inspired by wanting to develop an app that tracks when you do your school work and when is the best time to do specific tasks. This was my attempt at a UI design for the application, working with soft shapes and bright colors to craft a specific feel.",
+        "image": "Assets/SchoolPlannerImage.png",
+        "links": [
+            {
+                "name": "View Designs on Figma",
+                "url": "https://www.figma.com/file/Kb1RbIq1UCH1F8s9u0tnop/Resolute?node-id=0%3A1&t=etj5fceaDMAV6rsj-1"
+            }
+        ],
+        "tags": {
+            "frameworks": [
+                "Figma"
+            ],
+            "languages": [],
+            "type": [
+                "personal",
+                "web",
+                "design",
             ]
         }
     },
@@ -43,7 +66,8 @@ let projects_data = [
                 "Python"
             ],
             "type": [
-                "school"
+                "school",
+                "video game"
             ]
         }
     },
@@ -62,7 +86,9 @@ let projects_data = [
             }
         ],
         "tags": {
-            "frameworks": [],
+            "frameworks": [
+                "API"
+            ],
             "languages": [
                 "JavaScript",
                 "html/css"
@@ -163,7 +189,8 @@ let projects_data = [
         ],
         "tags": {
             "frameworks": [
-                "Flask"
+                "Flask",
+                "API"
             ],
             "languages": [
                 "JavaScript",
@@ -361,6 +388,32 @@ let projects_data = [
             "type": [
                 "personal",
                 "video game"
+            ]
+        }
+    },
+    {
+        "title": "Job Hero",
+        "description": "School project for my iOS development class. The task was to build an app in a team of 3, using functionality learned throughout the course. In addition create functionality learned on your own. You must also use the CoreData database and two APIs. Our project uses a company information API as well as a job listing API. With these it creates an app for user to follow job postings and companies, receive updates and news about those companies and postings, create a resume with a modular template, and complete interview prep.",
+        "image": "Assets/JobHeroLogo.png",
+        "links": [
+            {
+                "name": "View Designs on Proto.io",
+                "url": "https://pr.to/V3A3Y4/"
+            }
+        ],
+        "tags": {
+            "frameworks": [
+                "Proto.io",
+                "SwiftUI",
+                "API"
+            ],
+            "languages": [
+                "swift"
+            ],
+            "type": [
+                "school",
+                "mobile",
+                "design"
             ]
         }
     }
