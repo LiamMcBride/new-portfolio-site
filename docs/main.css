@@ -11,6 +11,31 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.img-special:hover {
+    cursor: pointer;
+    outline: solid 4px var(--green);
+}
+
+h1, h2, h3 {
+    scroll-margin-top: 66px;
+
+}
+
+h3 {
+    color: #c1c1c1;
+}
+
+#table-of-contents {
+    position: fixed;
+    left: 5%;
+    top: 120px;
+    line-height: 30px;
+}
+
+#table-of-contents a {
+    padding: 10px 0;
+}
+
 .resume-div h2 {
     color: var(--green);
 }
@@ -173,7 +198,7 @@ h2 {
     font-weight: bold;
 }
 
-.project-entry-div img {
+.project-entry-div img, .project-image {
     width: 100%;
     height: auto;
 }
@@ -211,6 +236,43 @@ h2 {
 
 .circle{
     border-radius: 50%;
+}
+
+.preview-div {
+    cursor: pointer;
+    display: block;
+    /* width: 100%; */
+    height: auto;
+    overflow: auto;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--green);
+}
+
+.overlay h1 {
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
+    text-align: center;
+}
+
+.preview-div:hover .overlay {
+    opacity: 1;
 }
 
 /* @media only screen and (max-device-width : 800px){
