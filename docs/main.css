@@ -273,9 +273,10 @@ h2 {
 
 .filter-cell{
     display: inline-grid;
-    grid-template-columns: 100px;
+    grid-template-columns: 90px;
     grid-template-rows: 1fr 1fr;
     color: var(--white);
+    margin-right: 8px;
     /* text-align: center; */
 }
 
@@ -284,7 +285,19 @@ h2 {
 }
 
 #filter-div {
-    display: none;
+    display: flex;
+    height: 50px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    background: var(--lighterGray);
+    background-image: none;
+    /* border: 1px solid black; */
 }
 
 /* @media only screen and (max-device-width : 800px){

@@ -452,8 +452,33 @@ let projects_data = [
                 "design"
             ]
         }
+    },
+    {
+        "id": 17,
+        "title": "HCI Project",
+        "description": "This semester, my team of 3 other students worked on a social technology project for our Human Computer Interaction class. We were tasked with designing a user-friendly and engaging social technology platform. To do this, we followed the four analysis phases of UX that we learned in class: contextual inquiry, contextual analysis, requirement extraction, and design-informing model construction.",
+        "image": "JobHeroLogo.png",
+        "vertical": 1,
+        "links": [
+            {
+                "name": "View Full Project Page",
+                "url": "./project-detail.html"
+            }
+        ],
+        "tags": {
+            "frameworks": [
+                "Proto.io",
+            ],
+            "languages": [
+            ],
+            "type": [
+                "school",
+                "design"
+            ]
+        }
     }
 ]
+
 
 let filter_types = []
 let filter_languages = []
@@ -486,7 +511,7 @@ function showFilters(){
     let show_filter_btn = document.getElementById("show-filter-btn");
     console.log(filter_div.style.display)
     if(filter_div.style.display == "none"){
-        filter_div.style.display = "block"
+        filter_div.style.display = "flex"
         show_filter_btn.style.display = "none";
     }
     else{
