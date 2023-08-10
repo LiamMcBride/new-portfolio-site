@@ -2,6 +2,10 @@
     font-size: 2em;
 }
 
+#table-of-contents{
+    display: none;
+}
+
 .introduction-header{
     display: block;
     align-items: center;
