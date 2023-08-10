@@ -271,8 +271,20 @@ h2 {
     text-align: center;
 }
 
+.filter-cell{
+    display: inline-grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 1fr 1fr;
+    color: var(--white);
+    /* text-align: center; */
+}
+
 .preview-div:hover .overlay {
     opacity: 1;
+}
+
+#filter-div {
+    display: none;
 }
 
 /* @media only screen and (max-device-width : 800px){

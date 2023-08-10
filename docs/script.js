@@ -467,15 +467,32 @@ let detail_project = null
 // project_root.innerHTML = assmbleProjectsHTML(projects_data)
 
 function imageZoom(imgName, vertical=false){
-    let zoomBox = document.getElementById("image-zoom")
-    zoomBox.innerHTML = `
-        <div onclick="imageUnzoom()" style="cursor: pointer; text-align: center; line-height: 25px; width: 50px; height: 25px; background-color: #55FF8F; position: absolute; top: 4px; right: 4px;">Back</div>
-        <img style="display: block; ${vertical ? "width: auto; height: 80%;" : "width: 60%; height: auto;"} margin: auto;" src="Assets/${imgName}">
-    `
-    zoomBox.style.display = "flex"
+    console.log(screen.width);
+    if(screen.width > 480){
+        let zoomBox = document.getElementById("image-zoom")
+        zoomBox.innerHTML = `
+            <div onclick="imageUnzoom()" style="cursor: pointer; text-align: center; line-height: 25px; width: 50px; height: 25px; background-color: #55FF8F; position: absolute; top: 4px; right: 4px;">Back</div>
+            <img style="display: block; ${vertical ? "width: auto; height: 80%;" : "width: 60%; height: auto;"} margin: auto;" src="Assets/${imgName}">
+        `
+        zoomBox.style.display = "flex"
+    }
 }
 function imageUnzoom(){
     document.getElementById("image-zoom").style.display = "none"
+}
+
+function showFilters(){
+    let filter_div = document.getElementById("filter-div")
+    let show_filter_btn = document.getElementById("show-filter-btn");
+    console.log(filter_div.style.display)
+    if(filter_div.style.display == "none"){
+        filter_div.style.display = "block"
+        show_filter_btn.style.display = "none";
+    }
+    else{
+        filter_div.style.display = "none"
+        show_filter_btn.style.display = "block";
+    }
 }
 
 function loadProjectDetails(){
@@ -592,12 +609,13 @@ function assembleProjectsHTML(data){
         tags_assembled = true
     }
     document.getElementById("result-count")
-        .innerText = `${item_count} Results`
+        .innerText = `${item_count} Projects`
 
     return projects
 }
 
 function resetFilters(){
+    showFilters();
     document.getElementById("filter-type").value = "all"
     document.getElementById("filter-language").value = "all"
     document.getElementById("filter-framework").value = "all"
