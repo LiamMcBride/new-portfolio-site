@@ -456,8 +456,8 @@ let projects_data = [
     {
         "id": 17,
         "title": "HCI Project",
-        "description": "This semester, my team of 3 other students worked on a social technology project for our Human Computer Interaction class. We were tasked with designing a user-friendly and engaging social technology platform. To do this, we followed the four analysis phases of UX that we learned in class: contextual inquiry, contextual analysis, requirement extraction, and design-informing model construction.",
-        "image": "JobHeroLogo.png",
+        "description": "In my Human Computer Interaction class, my team of 4 students worked on a social technology project for our Human Computer Interaction class. We were tasked with designing a user-friendly and engaging social technology platform. We decided to focus on reducing negative interactions on popular games made by Riot. To do this, we followed the four analysis phases of UX that we learned in class: contextual inquiry, contextual analysis, requirement extraction, and design-informing model construction.",
+        "image": "hci-photo.png",
         "vertical": 1,
         "links": [
             {
@@ -697,9 +697,18 @@ function makeLinksHTML(data){
     var retString = ""
 
     data.forEach(link => {
-        var temp = `
-        <a style="font-size: 18px" href="${link["url"]}" target="_blank">${link["name"]}</a><br>
-        `
+        var temp = ""
+        if(link["url"].includes("./")){
+            temp = `
+            <a style="font-size: 18px" href="${link["url"]}">${link["name"]}</a><br>
+            `
+        }
+        else{
+            temp = `
+            <a style="font-size: 18px" href="${link["url"]}" target="_blank">${link["name"]}</a><br>
+            `
+            
+        }
         retString += temp
     })
     return retString
