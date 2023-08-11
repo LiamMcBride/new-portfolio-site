@@ -479,6 +479,8 @@ let projects_data = [
     }
 ]
 
+//consider adding a status filter as well. This will indicate whether you're still working
+// on a project or if it is finished/shelved
 
 let filter_types = []
 let filter_languages = []
