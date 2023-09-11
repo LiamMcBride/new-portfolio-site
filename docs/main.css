@@ -144,8 +144,8 @@ a:hover {
 
 .introduction-header{
 
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 50px;
+    /* padding-bottom: 50px; */
     /* width: 100%; */
     display: grid;
     grid-gap: 40px;
@@ -169,7 +169,7 @@ h1 {
 }
 
 h2 {
-    color: var(--white);
+    color: var(--green);
 }
 
 
@@ -303,3 +303,29 @@ select {
 /* @media only screen and (max-device-width : 800px){
     
 } */
+
+.project-tag-container {
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.project-tag {
+    height: 25px;
+    background-color: orange;
+    margin-right: 8px;
+    padding: 4px;
+}
+
+button {
+    background-color: #55FF8F;
+    border: none;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
+svg {
+    background-color: #55FF8F;
+    margin-left: auto;
+    margin-right: auto;
+}

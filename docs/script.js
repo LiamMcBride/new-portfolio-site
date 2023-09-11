@@ -635,8 +635,8 @@ function assembleProjectsHTML(data){
         assembleFilters()
         tags_assembled = true
     }
-    document.getElementById("result-count")
-        .innerText = `${item_count} Projects`
+    // document.getElementById("result-count")
+    //     .innerText = `${item_count} Projects`
 
     return projects
 }
@@ -680,14 +680,33 @@ function makeProjectHTML(data){
     <div class="project-entry-div" id="${"project_" + data["id"]}">
         <img onclick="imageZoom('${data["image"]}', ${data["vertical"] == 1})" class="img-special"  src="Assets/${data["image"]}" alt="Website page">
         <div>
-            <div style="cursor: pointer" onclick="setDetailProject(${data["id"]})" class="project-entry-header">${data["title"]}</div>
+            <div class="project-entry-header">${data["title"]}</div>
                 <p style="font-size: 18px">
                     ${data["description"]}
                 </p>
-            ${makeLinksHTML(data["links"])}
+                ${makeLinksHTML(data["links"])}
+            </div>
         </div>
-    </div> 
-    `
+        </div> 
+        `
+        // ${makeTags(data['tags'])}
+}
+
+function makeTags(tags){
+    console.log(tags)
+    let tagStr = `<div class="project-tag-container">`
+    tags['languages'].sort()
+    tags['frameworks'].sort()
+    tags['type'].sort()
+    tags['languages'].forEach((tag) => tagStr += `<div class='project-tag'>${tag}</div>`);
+    // tagStr += "</div>"
+    // tagStr += `<div class="project-tag-container">`
+    tags['frameworks'].forEach((tag) => tagStr += `<div class='project-tag'>${tag}</div>`);
+    // tagStr += "</div>"
+    // tagStr += `<div class="project-tag-container">`
+    tags['type'].forEach((tag) => tagStr += `<div class='project-tag'>${tag}</div>`);
+    tagStr += "</div>"
+    return tagStr;
 }
 
 function setDetailProject(id){
