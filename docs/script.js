@@ -476,6 +476,33 @@ let projects_data = [
                 "design"
             ]
         }
+    },
+    {
+        "id": 18,
+        "title": "Buzzer App",
+        "description": "My friend enjoys playing trivia games with his friends and was struggling to find a buzzer application that would not require accounts, not push ads, or keep track of total order of buzzes, not just who buzzed in first. So me and him partnered to create this buzzer application. We decided to use React and Express for the stack as that closely aligned with a similar stack we use in class. The app has a simple login, only caring about the players name. From here you can also become the host of the session. The player's view consists of a buzzer button and an exit button. Once they buzz in the button is disabled until the host resets the buzzer. The host is able to see the order that everyone buzzed in at, all the players in the lobby, and who hasn't buzzed in yet. Additionally they can kick/remove players. The game is designed to be simple and just run on a localhost server, this requires all participants to be on the same network and the server runner must share their localhost ip with the players. An additional added feature that was really cool to implement was the profanity filter. We use the Obscenity package to keep unwanted usernames out of the queue. If somehow they get past that the host can kick them as well. Additional ideas to be implemented are: kicking gives you the option to add the username to the obscenity filter and to make a QR code that is auto generated for the localhost ip address to make it easier to share the link with your friends.",
+        "image": "buzzerapp.png",
+        "vertical": 0,
+        "links": [
+            {
+                "name": "View GitHut",
+                "url": "https://github.com/LiamMcBride/buzzer-app"
+            }
+        ],
+        "tags": {
+            "frameworks": [
+                "React",
+                "Express",
+            ],
+            "languages": [
+                "JavaScript"
+            ],
+            "type": [
+                "personal",
+                "web",
+                "mobile"
+            ]
+        }
     }
 ]
 
