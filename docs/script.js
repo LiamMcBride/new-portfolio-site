@@ -485,7 +485,7 @@ let projects_data = [
         "vertical": 0,
         "links": [
             {
-                "name": "View GitHut",
+                "name": "View GitHub",
                 "url": "https://github.com/LiamMcBride/buzzer-app"
             }
         ],
