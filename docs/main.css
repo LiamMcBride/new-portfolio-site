@@ -4,7 +4,8 @@
     --lighterGray: #5b5b5b;
     --green: #55FF8F;
     --dark-green: #3AB162;
-    --white: #D8D8D8;
+    /* --white: #D8D8D8; */
+    --white: #fff;
 }
 
 body::-webkit-scrollbar {
@@ -52,6 +53,7 @@ h3 {
     justify-content: right;
     color: var(--white);
     font-weight: bold;
+    z-index: 10;
 
 }
 
@@ -145,6 +147,22 @@ a:hover {
 .introduction-header{
 
     padding-top: 100px;
+    padding-bottom: 50px;
+    width: 100%;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: auto 100px; 
+
+}
+
+.title-page-introduction-header{
+
+    /* padding-top: 100px; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
     /* padding-bottom: 50px; */
     /* width: 100%; */
     /* display: grid; */
@@ -205,11 +223,13 @@ h2 {
 
 .intro-title{
     margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 2em;
     color: var(--white);
 }
 
 .name-title{
+    margin: 0px;
     font-size: 4em;
 }
 
@@ -299,6 +319,64 @@ select {
     background-image: none;
     /* border: 1px solid black; */
 }
+
+/* Contact stuff */
+
+.contact-fixed {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 16px;
+}
+
+.logo-svg {
+    width: 32px;
+    height: 32px;
+    /* background-color: black; */
+}
+
+.logo-svg path {
+    /* color: red; */
+    fill: var(--green);
+}
+
+.special-svg path {
+    /* color: red; */
+    fill: rgba(0, 0, 0, 0);
+}
+
+.logo-link {
+
+}
+
+.arrow-link {
+    position: absolute;
+    bottom: 64px;
+    left: calc(50% - 32px);
+    display: flex;
+    flex-direction: column;
+    color: var(--green);
+}
+
+.arrow-svg {
+    width: 64px;
+    height: 64px;
+    /* animation: bounceTag .35s; */
+    animation: bounceTag 0.5s; 
+    animation-direction: alternate; 
+    animation-iteration-count: infinite; 
+}
+
+.arrow-svg path {
+    stroke: var(--green);
+}
+
+@keyframes bounceTag{ 
+	from { transform: translate3d(0, 0, 0);} 
+	to { transform: translate3d(0, 25px, 0);} 
+} 
+
+
 
 /* @media only screen and (max-device-width : 800px){
     
