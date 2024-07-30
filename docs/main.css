@@ -145,11 +145,11 @@ a:hover {
 .introduction-header{
 
     padding-top: 100px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     /* width: 100%; */
-    display: grid;
-    grid-gap: 40px;
-    grid-template-columns: auto 100px; 
+    /* display: grid; */
+    /* grid-gap: 40px; */
+    /* grid-template-columns: auto 100px;  */
 
 }
 
