@@ -4,7 +4,8 @@
     --lighterGray: #5b5b5b;
     --green: #55FF8F;
     --dark-green: #3AB162;
-    --white: #D8D8D8;
+    /* --white: #D8D8D8; */
+    --white: #fff;
 }
 
 body::-webkit-scrollbar {
@@ -331,11 +332,17 @@ select {
 .logo-svg {
     width: 32px;
     height: 32px;
+    /* background-color: black; */
 }
 
 .logo-svg path {
     /* color: red; */
     fill: var(--green);
+}
+
+.special-svg path {
+    /* color: red; */
+    fill: rgba(0, 0, 0, 0);
 }
 
 .logo-link {
