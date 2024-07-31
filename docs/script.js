@@ -551,7 +551,7 @@ function loadProjectDetails(){
 }
 
 function projectsPageLoad(){
-    project_root = document.getElementById("projects_section")
+    project_root = document.getElementById("projects-div")
     project_root.innerHTML = assembleProjectsHTML(projects_data)
 }
 
@@ -703,17 +703,43 @@ function makeProjectHTML(data){
 
     return `
     <div class="project-entry-div" id="${"project_" + data["id"]}">
+        <h2 class="project-entry-header">${data["title"]}</h2>
         <img onclick="imageZoom('${data["image"]}', ${data["vertical"] == 1})" class="img-special"  src="Assets/${data["image"]}" alt="Website page">
         <div>
-            <div style="cursor: pointer" onclick="setDetailProject(${data["id"]})" class="project-entry-header">${data["title"]}</div>
-                <p style="font-size: 18px">
-                    ${data["description"]}
-                </p>
+            <p id=${"desc_" + data["id"]}>
+                ${makeDescription(data)}
+            </p>
             ${makeLinksHTML(data["links"])}
         </div>
     </div> 
     `
 }
+
+function makeDescription(data){
+    const amt = 400
+
+    if(data["description"].length <= amt){
+        return data["description"]
+    }
+
+    return `${truncateDescription(data["description"], amt)} <button onClick="handleUntruncate(${data["id"]})" class="more-btn">...</button>`
+}
+
+function truncateDescription(desc, amt) {
+    return desc.slice(0, amt)
+}
+
+function handleUntruncate(id) {
+    let data = getProjectFromId(id)
+    document.getElementById("desc_" + id).innerHTML = `${data["description"]} <button onClick="handleTruncate(${data["id"]})" class="more-btn">less</button>`
+}
+
+function handleTruncate(id) {
+    let data = getProjectFromId(id)
+    document.getElementById("desc_" + id).innerHTML = `${truncateDescription(data["description"], 400)} <button onClick="handleUntruncate(${data["id"]})" class="more-btn">...</button>`
+}
+
+
 
 function setDetailProject(id){
     // detail_project = projects_data[id]
@@ -739,4 +765,13 @@ function makeLinksHTML(data){
         retString += temp
     })
     return retString
+}
+
+function getProjectFromId(id){
+    for(let i = 0; i < projects_data.length; i++){
+        if(projects_data[i]["id"] == id){
+            return projects_data[i]
+        }
+    }
+    return null
 }
