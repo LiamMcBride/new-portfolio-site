@@ -626,7 +626,9 @@ function assembleFilters(){
 }
 
 function sortProjects(){
-    let project_root = document.getElementById("projects_section")
+    let project_root = document.getElementById("projects-div")
+    console.log("project_root")
+    console.log(project_root)
     project_root.innerHTML = ""
     project_root.innerHTML = assembleProjectsHTML(projects_data)
 }

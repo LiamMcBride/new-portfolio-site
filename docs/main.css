@@ -316,15 +316,6 @@ h2 {
     text-align: center;
 }
 
-.filter-cell{
-    display: inline-grid;
-    grid-template-columns: 90px;
-    grid-template-rows: 1fr 1fr;
-    color: var(--white);
-    margin-right: 8px;
-    /* text-align: center; */
-}
-
 .preview-div:hover .overlay {
     opacity: 1;
 }
@@ -332,6 +323,15 @@ h2 {
 #filter-div {
     display: flex;
     height: 50px;
+}
+
+.filter-cell{
+    display: inline-grid;
+    grid-template-columns: 90px;
+    grid-template-rows: 1fr 1fr;
+    color: var(--white);
+    margin-right: 8px;
+    /* text-align: center; */
 }
 
 select {
@@ -352,6 +352,10 @@ select {
     bottom: 0px;
     right: 0px;
     padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
 }
 
 .logo-svg {
