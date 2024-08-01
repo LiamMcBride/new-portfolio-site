@@ -267,9 +267,10 @@ h2 {
   }
 
 .category-tag {
+    
     padding: 6px 16px;
     background-color: #464646;
-    height: 24px;
+    /* height: 24px; */
     margin: 4px;
     text-align: center;
     line-height: 24px;

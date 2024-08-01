@@ -545,8 +545,6 @@ function assembleFilters(){
 
 function sortProjects(){
     let project_root = document.getElementById("projects-div")
-    console.log("project_root")
-    console.log(project_root)
     project_root.innerHTML = ""
     project_root.innerHTML = assembleProjectsHTML(projects_data)
 }
@@ -643,10 +641,24 @@ function makeProjectHTML(data){
 function generateVisualTags(data){
     let tags = ""
     
-    tags += data.tags["languages"].map(t => `<div class="category-tag">${t}</div>`)
-    let f_tags = data.tags["frameworks"].map(t => `<div class="category-tag">${t}</div>`)
+    tags += data.tags["languages"].map(t => `<button onClick="tagClick('${t}','language')" class="category-tag">${t}</button>`)
+    let f_tags = data.tags["frameworks"].map(t => `<button onClick="tagClick('${t}','framework')" class="category-tag">${t}</button>`)
     
     return tags + f_tags
+}
+
+function tagClick(cat, type){
+    console.log(`cat: ${cat} type: ${type}`)
+
+    let filter_div = document.getElementById("filter-div")
+    if(filter_div.style.display == "none"){
+        showFilters()
+    }
+
+    document.getElementById(`filter-language`).value = "all"
+    document.getElementById(`filter-framework`).value = "all"
+    document.getElementById(`filter-${type}`).value = cat
+    sortProjects()
 }
 
 function handleImageHover(id) {
