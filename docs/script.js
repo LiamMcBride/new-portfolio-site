@@ -60,8 +60,8 @@ let projects_data = [
         "vertical": 1,
         "links": [
             {
-                "name": "View Designs on Proto.io",
-                "url": "https://pr.to/V3A3Y4/"
+                "name": "",
+                "url": ""
             }
         ],
         "tags": {

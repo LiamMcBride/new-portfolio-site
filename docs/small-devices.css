@@ -21,13 +21,18 @@ h2 {
 .introduction-header{
     display: block;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .nav-tab {
     /* padding: 2px;
     margin: 2px; */
     width: 50px;
+}
+
+.nav-bar {
+    top: calc(100vh - 50px);
+    justify-content: center;
 }
 
 .avatar{
