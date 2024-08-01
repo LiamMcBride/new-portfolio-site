@@ -47,7 +47,7 @@
             <h1 class="not-inline">Projects</h1>
         </div>
       </div>
-      <div id="show-filter-btn" style="height: 50px">
+      <div id="show-filter-btn">
         <button onclick="showFilters()">Filter</button>
       </div>
       <div style="display: none;" id="filter-div">
@@ -69,8 +69,10 @@
             <option value="all">all</option>
           </select>
         </div>
-        <button style="height: 20px; margin-left: 8px; margin-right: 8px; align-self: flex-end;" onclick="resetFilters()">Reset</button>
-        <h2 style="display: grid" id="result-count">0 Projects</h2>
+        <div class="filter-cell">
+          <p style="display: grid" id="result-count">0 Projects</p>
+          <button onclick="resetFilters()">Reset</button>
+        </div>
       </div>
       <div id="projects-div">
       </div>
