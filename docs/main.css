@@ -68,7 +68,6 @@ h3 {
     color: var(--white);
     font-weight: bold;
     z-index: 10;
-
 }
 
 .hidden {
@@ -79,6 +78,11 @@ h3 {
     color: var(--white);
 }
 
+.spacer-div {
+    display: block;
+    width: 5%;
+}
+
 svg {
     height: 50px;
     width: 50px;
@@ -86,17 +90,18 @@ svg {
 }
 
 .nav-tab {
-    /* height: 50%; */
-    float: right;
+    /* float: right; */
     padding: 5px;
     margin: 5px;
     width: 75px;
     text-align: center;
     display: block;
     user-select: none;
+
 }
 
 .nav-tab-selected {
+    margin-bottom: 1px;
     border-bottom: 4px solid var(--green);
 }
 
