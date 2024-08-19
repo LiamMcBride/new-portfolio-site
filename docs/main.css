@@ -235,8 +235,22 @@ h2 {
     align-items: center;
 }
 
-.project-entry-div h2 {
+.project-entry-header-and-date {
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: none;
+    margin: none;
+}
+
+.project-entry-header-and-date p {
+    /* line-height: 3rem; */
+    margin: none;
+    opacity: .7;
+}
+
+.project-entry-div h2 {
 }
 
 .project-img-holder {

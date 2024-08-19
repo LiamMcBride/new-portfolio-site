@@ -1,6 +1,7 @@
 let projects_data = [
     {
         "id": 18,
+        "date": new Date(2023, 11, 1),
         "title": "Buzzer App",
         "description": "My friend wanted help starting a project to use with our friends, so we crafted a buzzer application for trivia games without the hassles of accounts, ads, or unnecessary tracking. Using React and Express, our chosen stack aligned seamlessly with our class experience. The app boasts a straightforward login, focusing solely on the player's name. Players can easily become hosts, gaining access to a view displaying buzz order, lobby participants, and unbuzzed players. The host can reset the buzzer, manage players, and even implement a profanity filter using the Obscenity package. Future plans include the option to add filtered names, along with an auto-generated QR code for simplified sharing on a localhost server. This project is really fun because we’ve actually used it several times since and it works really well for our use cases. It’s just a cool experience to use something you created with your friends.",
         "image": "buzzerapp.png",
@@ -28,6 +29,7 @@ let projects_data = [
     },
     {
         "id": 2,
+        "date": new Date(2022, 10, 1),
         "title": "Perline Noise Map Generation",
         "description": "For a speaking project, I delved into the concept of Perlin noise and its application in video game map generation, particularly in games like Minecraft. During my research, I developed a Python project analyzing gray levels in a Perlin noise PNG, generating a text file with values based on pixel percentages. Subsequently, in Unity using C# I created a project that read this file, applied percentages to total height, and generated a world from the height-map, as depicted in the image. Witnessing the project come to life, especially with color-coded blocks based on height, was amazing. Despite its swift execution, the project produced relatively convincing landscapes, showcasing the effectiveness of Perlin noise in shaping diverse and captivating terrains in video games. As well as allowing me to give a well educated speech on the subject.",
         "image": "perlinNoise.png",
@@ -54,6 +56,7 @@ let projects_data = [
     },
     {
         "id": 16,
+        "date": new Date(2023, 4, 1),
         "title": "Job Hero",
         "description": "Led this school project for my iOS development class. The task was to build an app in a team of 3, using functionality learned throughout the course. In addition, create functionality learned on your own. You must also use the CoreData database and two APIs. Our project uses a company information API as well as a job listing API. With these it creates an app for users to follow job postings and companies, receive updates and news about those companies and postings, create a resume with a modular template, and complete interview prep. In addition it’s secured using the FaceID interface. I specialized in designing the UI, creating interaction with the APIs, as well as displaying the Job and Company data correctly in the application.",
         "image": "JobHeroLogo.png",
@@ -82,6 +85,7 @@ let projects_data = [
     },
     {
         "id": 17,
+        "date": new Date(2023, 4, 1),
         "title": "HCI Project",
         "description": "In my Human Computer Interaction class, my team of 4 students worked on a social technology project for our Human Computer Interaction class. We were tasked with designing a user-friendly and engaging social technology platform. We decided to focus on reducing negative interactions on popular games made by Riot. To do this, we followed the four analysis phases of UX that we learned in class: contextual inquiry, contextual analysis, requirement extraction, and design-informing model construction. No code was written but a lot of value was obtained through the process, particularly the user studies where we walked testers through a user story and documented difficult interactions with our UI for improvement.",
         "image": "hci-photo.png",
@@ -106,6 +110,7 @@ let projects_data = [
     },
     {
         "id": 10,
+        "date": new Date(2021, 9, 1),
         "title": "Code Cracker",
         "description": "This was a school project where you needed to create code that would use SHA to encrypt a password. The code then uses several password dictionaries to attempt and crack the code. The time to crack the password is recorded and displayed to the user.",
         "image": "codeCracker.png",
@@ -128,6 +133,7 @@ let projects_data = [
     },
     {
         "id": 8,
+        "date": new Date(2022, 11, 1),
         "title": "Wordle 64",
         "description": "A while ago, the hit game Worldle was taking over everywhere. Alternate games started appearing. One of them was Wordle except you had to solve 16 boards at the same time. Each board had 21 attempts. My brother enjoyed this but wanted a bigger challenge. So he asked me to make the same thing except with 64 boards. This is the result of that. It was a fun project to practice some vanilla JS. As far as playability goes... I'm not sure anyone has ever finished a game of Wordle 64, but perhaps you could be the first! Make sure to let me know if you do complete it.",
         "image": "wordle64.png",
@@ -157,6 +163,7 @@ let projects_data = [
     },
     {
         "id": 9,
+        "date": new Date(2022, 11, 1),
         "title": "Wordle Solver",
         "description": "Back when Wordle was all the rage I was watching a lot of videos about the most optimal first word to use in Wordle. I'm a big believer that 'soare' is the optimal word, but regardless I thought it would make an interesting challenge to solve a Wordle board. The original idea was to hook the bot up with Selenium and have it solve the real Wordle in the browser. But alas I never reached that point. Maybe one day. Essentially the bot creates scores based on where letters can and cannot be placed after the initial guess. From here it narrows down possible choices and makes more guesses. I've achieved on average a 60% success rate. Which is lower than my personal rate... so I would say it's far from a perfect program. But it had some exciting challenges and might be something I go back and optimize. Update: My friend made it as well in MatLab and had far more success so I definitely will be optimizing my solution, can’t let him get the better of me!",
         "image": "wordlesolver.png",
@@ -179,6 +186,7 @@ let projects_data = [
     },
     {
         "id": 5,
+        "date": new Date(2022, 7, 1),
         "title": "Expense Chart",
         "description": "This was a CSS/html challenge. Perhaps my favorite. I really enjoyed making a chart via css and JS. This was one of my first introductions to data visualization via code and it definitely got me hooked. I want to do lots more data visualization projects in the future. Update: Now that I’ve had a few years to look back on it, I’ve learned how to create visualizations in D3 and SVG rather than pure html and CSS.",
         "image": "expenses-chart.png",
@@ -207,6 +215,7 @@ let projects_data = [
     },
     {
         "id": 4,
+        "date": new Date(2022, 7, 1),
         "title": "Code Snippets",
         "description": "Code snippets was a CSS/html challenge that I completed. All the assets were provided to me but everything else was done solo. This was my first try at a landing-page style. It was really fun to complete as the website design itself was very appealing to me. It looks sleek and modern. Gave really good practice with image placement as well as using float.",
         "image": "code-snippets.png",
@@ -234,6 +243,7 @@ let projects_data = [
     },
     {
         "id": 6,
+        "date": new Date(2022, 7, 1),
         "title": "Developer Portfolio",
         "description": "This was a CSS/html challenge, one of my first attempts at CSS and html. It’s a pretty basic page but interesting to make. I needed a lot of help and tutorials to get through this project. But once I finished I definitely learned a lot about html and css styling that I've continued to develop since.",
         "image": "developer-portfolio.png",
@@ -261,6 +271,7 @@ let projects_data = [
     },
     {
         "id": 0,
+        "date": new Date(2022, 7, 1),
         "title": "Stat Binge",
         "description": "I spearheaded a conceptual project in collaboration with a friend at NC State, driven by his desire to delve into Python and programming. This initiative served as a valuable exercise in project ideation and management for me. Our collective vision was to make a sophisticated show and movie ranking platform, uniquely centered on statistics, providing users with insightful recommendations based on personal preferences and those of their peers. My primary focus during this endeavor was on the design aspect of the project. I crafted diverse Figma flows, outlining the several user journeys through the platform. Simultaneously, my collaborator took charge of implementing our Flask backend, where I provided crucial assistance. We brought to life the user experience with a minimalist React interface that complemented our initial limited functionality. As the summer progressed, we successfully concluded the project. My collaborator gained invaluable coding skills, while I acquired extensive knowledge in UX design and Figma.",
         "image": "stat-binge-photo.png",
@@ -294,6 +305,7 @@ let projects_data = [
     },
     {
         "id": 11,
+        "date": new Date(2018, 10, 1),
         "title": "Brain Dead",
         "description": "This is perhaps my most ambitious project to date. The first thing you ever hear about game development is to never start with your dream game. So of course I started with my dream game! I wanted to remake Black Ops II Zombies, fixing a few things I thought needed fixing. I spent about two years developing it off and on. I ran two separate play test sessions and learned a lot about my weapon scaling and enemy difficulty. Every single asset I made myself with Blender or Unity. It truly was the project that cemented my love of programming. It simply was just too big for my experience level. I got it to a playable state (somewhat) and eventually tabled it soon after as I entered college.",
         "image": "fanaticalsgif.gif",
@@ -320,6 +332,7 @@ let projects_data = [
     },
     {
         "id": 13,
+        "date": new Date(2020, 3, 1),
         "title": "Lively Spirit",
         "description": "Experience a platformer that doesn't punish you for dying! A fun game where you transfer your spirit from body to body in order to keep it alive, in order to transfer your body you've got to cause some havoc, whether that's smashing into a car, giant spike, or even a plane! Enjoy the fun gameplay and pixel art that will surely make you feel better about your own artistic skill! Created in 48 hours for Ludum Dare 46 with the theme 'Keep it Alive'. Utilized Unity and Aseprite.",
         "image": "livelyspiritgif.gif",
@@ -346,6 +359,7 @@ let projects_data = [
     },
     {
         "id": 14,
+        "date": new Date(2019, 11, 1),
         "title": "Gatsby Game",
         "description": "This was a simple game made using Unity. It's a copy of Frogger except you're Myrtle trying not to get hit by Gatsby's car. This was made for an English project. It was a lot of fun to create the pixel assets. And yes the cars don't have any collisions with each other. I like to think that adds to the charm. Made with Unity and Microsoft Paint.",
         "image": "gatsbygif.gif",
@@ -372,6 +386,7 @@ let projects_data = [
     },
     {
         "id": 12,
+        "date": new Date(2022, 11, 1),
         "title": "Minecraft Clone",
         "description": "I made this project for a video assignment in my digital media class. I had always wanted to recreate Minecraft in Unity as it's a very popular endeavor to help learn game design skills. This is by no means the full game, just a simple creative building sandbox, but I'm honestly proud with what I was able to add in a short period of time. In particular the textures were really fun to make and add to the game, really made it come to life. Feel free to download! In the future I might attempt to combine it with my perlin noise Unity project.",
         "image": "minecraft.png",
@@ -398,6 +413,7 @@ let projects_data = [
     },
     {
         "id": 15,
+        "date": new Date(2019, 10, 1),
         "title": "Crucible",
         "description": "This was one of the first complete games I ever made. I made it for an English class assignment about the Salem Witch Trials. You can fly around as a witch and attack common-folk. I wouldn't say this is a representation of my current skill. I've come a long way since making this, but it's quite fun to show some of my earlier projects.",
         "image": "crucible.png",
@@ -463,9 +479,6 @@ function showFilters(){
         filter_div.style.display = "none"
         show_filter_btn.style.display = "block";
     }
-}
-
-function loadProjectDetails(){
 }
 
 function projectsPageLoad(){
@@ -621,7 +634,10 @@ function makeProjectHTML(data){
 
     return `
     <div class="project-entry-div" id="${"project_" + data["id"]}">
-        <h2 class="project-entry-header">${data["title"]}</h2>
+        <div class="project-entry-header-and-date">
+            <h2 class="project-entry-header">${data["title"]}</h2>
+            <p>${data["date"].toLocaleString('en-US', { month: 'long', year: 'numeric' })}</p>
+        </div>
         <div onmouseout="handleImageHover(${data["id"]})" onmouseover="handleImageHover(${data["id"]})" class="project-img-holder">
             <img class="img-special"  src="Assets/${data["image"]}" alt="Website page">
             <div  id="img-cover-${data["id"]}" class="hidden">
