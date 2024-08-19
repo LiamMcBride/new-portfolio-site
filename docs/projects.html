@@ -71,6 +71,14 @@
           </select>
         </div>
         <div class="filter-cell">
+          Sort By 
+          <select onchange="sortProjects()" name="sort-by" id="filter-sort">
+            <option value="none">none</option>
+            <option value="newtoold">new to old</option>
+            <option value="oldtonew">old to new</option>
+          </select>
+        </div>
+        <div class="filter-cell">
           <p style="display: grid" id="result-count">0 Projects</p>
           <button onclick="resetFilters()">Reset</button>
         </div>

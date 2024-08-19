@@ -244,6 +244,10 @@ h2 {
     margin: none;
 }
 
+#date-sort {
+    background-color: var(--lightGray);
+}
+
 .project-entry-header-and-date p {
     /* line-height: 3rem; */
     margin: none;

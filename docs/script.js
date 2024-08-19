@@ -581,6 +581,24 @@ function assembleProjectsHTML(data){
         document.getElementById("filter-language").value,
         document.getElementById("filter-framework").value
     ]
+
+    //sort by date
+    if(document.getElementById("filter-sort").value === 'newtoold'){
+        projects_data.sort((a,b) => {
+            if(a.date > b.date) return -1;
+            if(a.date == b.date) return 0;
+            return 1;
+        })
+    }
+    else if(document.getElementById("filter-sort").value === 'oldtonew'){
+        projects_data.sort((a,b) => {
+            if(a.date > b.date) return 1;
+            if(a.date == b.date) return 0;
+            return -1;
+        })
+    }
+    
+
     projects_data.forEach(proj => {
         if(matchesTags(filters, proj)){
             item_count += 1
@@ -593,6 +611,7 @@ function assembleProjectsHTML(data){
     }
     document.getElementById("result-count")
         .innerText = `${item_count} Projects`
+
 
     return projects
 }
