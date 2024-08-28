@@ -1,5 +1,33 @@
 let projects_data = [
     {
+        "id": 19,
+        "date": new Date(2024, 6, 1),
+        "title": "Challenge Social Media App",
+        "description": "While looking for jobs, my friend and I decided to keep updating our skills with a personal project. Challenger is a social media platform we’re designing with React Native and Express. Our goals for this project are to learn more in-depth mobile development with React Native. Have a production build and pass all Google Play and App Store release requirements. Have production, staging, and developer stages, with prod and staging hosted. Have continuous integration (CI) to push patches and new releases to all platforms. Have a real user base (our friends and family) and gain experience working on bug fixes and handling real user data.<br><br> So far we are in the beginning stages of development. We have a local developer build with hashing and token authentication. Basic app navigation with Expo Router. Basic feed and profile pages with proper URL routing. Photo upload and viewing. And the ability to view but not change another user’s profile. Coming up we hope to achieve friending functionality, viewing your friend’s friends, and post interactions. Including making your own caption, liking, commenting, and liking comments.",
+        "image": "challenger.png",
+        "vertical": 0,
+        "links": [
+            {
+                "name": "View GitHub",
+                "url": "https://github.com/bluke313/ChallengeApp"
+            }
+        ],
+        "tags": {
+            "frameworks": [
+                "React Native",
+                "Express",
+            ],
+            "languages": [
+                "JavaScript"
+            ],
+            "type": [
+                "personal",
+                "web",
+                "mobile"
+            ]
+        }, "current": true
+    },
+    {
         "id": 18,
         "date": new Date(2023, 11, 1),
         "title": "Buzzer App",
@@ -25,7 +53,7 @@ let projects_data = [
                 "web",
                 "mobile"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 2,
@@ -52,7 +80,7 @@ let projects_data = [
                 "school",
                 "video game"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 16,
@@ -81,7 +109,7 @@ let projects_data = [
                 "mobile",
                 "design"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 17,
@@ -106,7 +134,7 @@ let projects_data = [
                 "school",
                 "design"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 10,
@@ -129,7 +157,7 @@ let projects_data = [
             "type": [
                 "school"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 8,
@@ -159,7 +187,7 @@ let projects_data = [
                 "web",
                 "video game"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 9,
@@ -180,9 +208,9 @@ let projects_data = [
                 "Python"
             ],
             "type": [
-                "personal",                
+                "personal",
             ]
-        }
+        }, "current": false
     },
     {
         "id": 5,
@@ -211,7 +239,7 @@ let projects_data = [
                 "personal",
                 "web"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 4,
@@ -239,7 +267,7 @@ let projects_data = [
                 "personal",
                 "web"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 6,
@@ -267,7 +295,7 @@ let projects_data = [
                 "personal",
                 "web"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 0,
@@ -301,7 +329,7 @@ let projects_data = [
                 "design",
                 "database"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 11,
@@ -328,7 +356,7 @@ let projects_data = [
                 "personal",
                 "video game"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 13,
@@ -355,7 +383,7 @@ let projects_data = [
                 "personal",
                 "video game"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 14,
@@ -382,7 +410,7 @@ let projects_data = [
                 "personal",
                 "video game"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 12,
@@ -409,7 +437,7 @@ let projects_data = [
                 "school",
                 "video game"
             ]
-        }
+        }, "current": false
     },
     {
         "id": 15,
@@ -435,9 +463,9 @@ let projects_data = [
                 "personal",
                 "video game"
             ]
-        }
+        }, "current": false
     },
-    
+
 ]
 
 
@@ -452,9 +480,9 @@ let current_preview_index = 0
 let detail_project = null
 // project_root.innerHTML = assmbleProjectsHTML(projects_data)
 
-function imageZoom(imgName, vertical=false){
+function imageZoom(imgName, vertical = false) {
     console.log(screen.width);
-    if(screen.width > 480){
+    if (screen.width > 480) {
         let zoomBox = document.getElementById("image-zoom")
         zoomBox.innerHTML = `
             <div onclick="imageUnzoom()" style="cursor: pointer; text-align: center; line-height: 25px; width: 50px; height: 25px; background-color: #55FF8F; position: absolute; top: 4px; right: 4px;">Back</div>
@@ -463,40 +491,40 @@ function imageZoom(imgName, vertical=false){
         zoomBox.style.display = "flex"
     }
 }
-function imageUnzoom(){
+function imageUnzoom() {
     document.getElementById("image-zoom").style.display = "none"
 }
 
-function showFilters(){
+function showFilters() {
     let filter_div = document.getElementById("filter-div")
     let show_filter_btn = document.getElementById("show-filter-btn");
     console.log(filter_div.style.display)
-    if(filter_div.style.display == "none"){
+    if (filter_div.style.display == "none") {
         filter_div.style.display = "flex"
         show_filter_btn.style.display = "none";
     }
-    else{
+    else {
         filter_div.style.display = "none"
         show_filter_btn.style.display = "block";
     }
 }
 
-function projectsPageLoad(){
+function projectsPageLoad() {
     project_root = document.getElementById("projects-div")
     project_root.innerHTML = assembleProjectsHTML(projects_data)
 }
 
-function getLastPreviewIndex(){
-    if(current_preview_index + 4 >= projects_data.length  - 1){
+function getLastPreviewIndex() {
+    if (current_preview_index + 4 >= projects_data.length - 1) {
         return current_preview_index - projects_data.length - 1
     }
     return current_preview_index + 4
 }
 
-function generatePreviews(){
+function generatePreviews() {
     let htmlString = ""
     let end_preview_index = getLastPreviewIndex(current_preview_index)
-    for(let i = current_preview_index; i < end_preview_index; i++){
+    for (let i = current_preview_index; i < end_preview_index; i++) {
         let proj = projects_data[i]
         htmlString += `
         <div class="preview-div" onclick="location.href='projects.html#project_${proj["id"]}'">
@@ -524,7 +552,7 @@ function generatePreviews(){
     console.log(htmlString)
 }
 
-function assembleFilters(){
+function assembleFilters() {
     let tHtml = ``
     let sBox = document.getElementById("filter-type")
     filter_types.sort()
@@ -534,7 +562,7 @@ function assembleFilters(){
         `
     })
     sBox.innerHTML += tHtml
-    
+
     tHtml = ``
     sBox = document.getElementById("filter-language")
     filter_languages.sort()
@@ -544,7 +572,7 @@ function assembleFilters(){
         `
     })
     sBox.innerHTML += tHtml
-    
+
     tHtml = ``
     sBox = document.getElementById("filter-framework")
     filter_frameworks.sort()
@@ -556,24 +584,24 @@ function assembleFilters(){
     sBox.innerHTML += tHtml
 }
 
-function sortProjects(){
+function sortProjects() {
     let project_root = document.getElementById("projects-div")
     project_root.innerHTML = ""
     project_root.innerHTML = assembleProjectsHTML(projects_data)
 }
 
-function matchesTags(filt, proj){
-    if(filt[0] == "all" || proj["tags"]["type"].includes(filt[0])){
-        if(filt[1] == "all" || proj["tags"]["languages"].includes(filt[1])){
-            if(filt[2] == "all" || proj["tags"]["frameworks"].includes(filt[2])){
+function matchesTags(filt, proj) {
+    if (filt[0] == "all" || proj["tags"]["type"].includes(filt[0])) {
+        if (filt[1] == "all" || proj["tags"]["languages"].includes(filt[1])) {
+            if (filt[2] == "all" || proj["tags"]["frameworks"].includes(filt[2])) {
                 return true
             }
-        }   
+        }
     }
     return false
 }
 
-function assembleProjectsHTML(data){
+function assembleProjectsHTML(data) {
     var projects = ``
     item_count = 0
     filters = [
@@ -583,29 +611,29 @@ function assembleProjectsHTML(data){
     ]
 
     //sort by date
-    if(document.getElementById("filter-sort").value === 'newtoold'){
-        projects_data.sort((a,b) => {
-            if(a.date > b.date) return -1;
-            if(a.date == b.date) return 0;
+    if (document.getElementById("filter-sort").value === 'newtoold') {
+        projects_data.sort((a, b) => {
+            if (a.date > b.date) return -1;
+            if (a.date == b.date) return 0;
             return 1;
         })
     }
-    else if(document.getElementById("filter-sort").value === 'oldtonew'){
-        projects_data.sort((a,b) => {
-            if(a.date > b.date) return 1;
-            if(a.date == b.date) return 0;
+    else if (document.getElementById("filter-sort").value === 'oldtonew') {
+        projects_data.sort((a, b) => {
+            if (a.date > b.date) return 1;
+            if (a.date == b.date) return 0;
             return -1;
         })
     }
-    
+
 
     projects_data.forEach(proj => {
-        if(matchesTags(filters, proj)){
+        if (matchesTags(filters, proj)) {
             item_count += 1
             projects += makeProjectHTML(proj)
         }
     })
-    if(!tags_assembled){
+    if (!tags_assembled) {
         assembleFilters()
         tags_assembled = true
     }
@@ -616,7 +644,7 @@ function assembleProjectsHTML(data){
     return projects
 }
 
-function resetFilters(){
+function resetFilters() {
     showFilters();
     document.getElementById("filter-type").value = "all"
     document.getElementById("filter-language").value = "all"
@@ -624,28 +652,28 @@ function resetFilters(){
     sortProjects()
 }
 
-function makeProjectHTML(data){
-    if(!tags_assembled){
+function makeProjectHTML(data) {
+    if (!tags_assembled) {
         let types = data["tags"]["type"]
 
         types.forEach(type => {
-            if(!filter_types.includes(type)){
+            if (!filter_types.includes(type)) {
                 filter_types.push(type)
             }
         })
-        
+
         let languages = data["tags"]["languages"]
 
         languages.forEach(type => {
-            if(!filter_languages.includes(type)){
+            if (!filter_languages.includes(type)) {
                 filter_languages.push(type)
             }
         })
-        
+
         let frameworks = data["tags"]["frameworks"]
 
         frameworks.forEach(type => {
-            if(!filter_frameworks.includes(type)){
+            if (!filter_frameworks.includes(type)) {
                 filter_frameworks.push(type)
             }
         })
@@ -658,6 +686,7 @@ function makeProjectHTML(data){
             <p>${data["date"].toLocaleString('en-US', { month: 'long', year: 'numeric' })}</p>
         </div>
         <div onmouseout="handleImageHover(${data["id"]})" onmouseover="handleImageHover(${data["id"]})" class="project-img-holder">
+            ${data["current"] ? "<div class='on-going-tag'>In Progress</div>" : ""}
             <img class="img-special"  src="Assets/${data["image"]}" alt="Website page">
             <div  id="img-cover-${data["id"]}" class="hidden">
                 ${generateVisualTags(data)}
@@ -673,20 +702,20 @@ function makeProjectHTML(data){
     `
 }
 
-function generateVisualTags(data){
+function generateVisualTags(data) {
     let tags = ""
-    
+
     tags += data.tags["languages"].map(t => `<button onClick="tagClick('${t}','language')" class="category-tag">${t}</button>`)
     let f_tags = data.tags["frameworks"].map(t => `<button onClick="tagClick('${t}','framework')" class="category-tag">${t}</button>`)
-    
+
     return tags + f_tags
 }
 
-function tagClick(cat, type){
+function tagClick(cat, type) {
     console.log(`cat: ${cat} type: ${type}`)
 
     let filter_div = document.getElementById("filter-div")
-    if(filter_div.style.display == "none"){
+    if (filter_div.style.display == "none") {
         showFilters()
     }
 
@@ -698,19 +727,19 @@ function tagClick(cat, type){
 
 function handleImageHover(id) {
     let elem = document.getElementById("img-cover-" + id)
-    
-    if(elem.classList.contains("hidden")){
+
+    if (elem.classList.contains("hidden")) {
         elem.classList = "cover-screen"
     }
-    else{
+    else {
         elem.classList = "hidden"
     }
 }
 
-function makeDescription(data){
+function makeDescription(data) {
     const amt = 400
 
-    if(data["description"].length <= amt){
+    if (data["description"].length <= amt) {
         return data["description"]
     }
 
@@ -733,35 +762,35 @@ function handleTruncate(id) {
 
 
 
-function setDetailProject(id){
+function setDetailProject(id) {
     // detail_project = projects_data[id]
     location.replace('./project-detail.html');
 }
 
-function makeLinksHTML(data){
+function makeLinksHTML(data) {
     var retString = ""
 
     data.forEach(link => {
         var temp = ""
-        if(link["url"].includes("./")){
+        if (link["url"].includes("./")) {
             temp = `
             <a style="font-size: 18px" href="${link["url"]}">${link["name"]}</a><br>
             `
         }
-        else{
+        else {
             temp = `
             <a style="font-size: 18px" href="${link["url"]}" target="_blank">${link["name"]}</a><br>
             `
-            
+
         }
         retString += temp
     })
     return retString
 }
 
-function getProjectFromId(id){
-    for(let i = 0; i < projects_data.length; i++){
-        if(projects_data[i]["id"] == id){
+function getProjectFromId(id) {
+    for (let i = 0; i < projects_data.length; i++) {
+        if (projects_data[i]["id"] == id) {
             return projects_data[i]
         }
     }

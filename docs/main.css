@@ -244,6 +244,20 @@ h2 {
     margin: none;
 }
 
+.on-going-tag {
+    background-color: red;
+    padding: 4px 32px;
+    position: absolute;
+    font-weight: 700;
+    color: var(--backColor);
+    background-color: var(--green);
+    right: 0;
+    top: 0;
+    transform: translateX(45%) translateY(-70%) rotate(45deg);
+    transform-origin: top left;
+    z-index: 9;
+}
+
 #date-sort {
     background-color: var(--lightGray);
 }
@@ -258,6 +272,7 @@ h2 {
 }
 
 .project-img-holder {
+    overflow: hidden;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -326,7 +341,7 @@ h2 {
     /* width: 100%; */
     /* max-height: 285px; */
     height: auto;
-    max-width: 400px;
+    max-width: 600px;
     /* outline: 1px solid black; */
 }
 
