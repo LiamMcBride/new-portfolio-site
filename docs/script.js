@@ -480,6 +480,91 @@ let current_preview_index = 0
 let detail_project = null
 // project_root.innerHTML = assmbleProjectsHTML(projects_data)
 
+document.addEventListener("animationend", (event) => {
+    if(event.animationName === "slideRight"){
+        event.target.style.display = "none"
+        event.target.classList.remove("slide-right")
+    }
+    if(event.animationName === "slideLeft"){
+        event.target.style.display = "block"
+        event.target.classList.remove("slide-left")
+    }
+    if(event.animationName === "doASpin"){
+        event.target.style.transform = "rotate(180deg)"
+        event.target.classList.remove("do-a-spin")
+    }
+    if(event.animationName === "doAOppositeSpin"){
+        event.target.style.transform = ""
+        event.target.classList.remove("do-a-opposite-spin")
+    }
+})
+
+
+
+function elementIsHidden(elem) {
+    let computedStyle = window.getComputedStyle(elem)
+    return computedStyle.getPropertyValue("display") === "none"
+}
+
+function hideOrShowSocials() {
+    if(elementIsHidden(document.getElementsByClassName('logo-link')[0])){
+        //show
+        showElements()
+    }
+    else {
+        //hide
+        hideElements()
+    }
+}
+
+function onSocialsLoad(page) {
+    if(page != 0){
+        console.log(localStorage.getItem("links-hidden"))
+        localStorage.getItem("links-hidden") === "true" ? null : showElementsNoAnimation()
+    }
+    else {
+        console.log(localStorage.getItem("links-hidden"))
+        localStorage.getItem("links-hidden") === "true" ? null : showElements()
+    }
+}
+
+function showElementsNoAnimation() {
+
+    let elements = Array.from(document.getElementsByClassName("contact-fixed")[0].children)
+
+    elements.slice(0,3).forEach((el) => {
+        el.style.display = "block"
+    })
+    elements[3].style.transform = "rotate(180deg)"
+}
+
+function hideElements() {
+
+    localStorage.setItem("links-hidden", true)
+
+    let elements = Array.from(document.getElementsByClassName("contact-fixed")[0].children)
+
+    elements.slice(0,3).forEach((el) => {
+        el.classList.add("slide-right")
+    })
+    elements[3].classList.add("do-a-opposite-spin")
+
+}
+
+function showElements() {
+    localStorage.setItem("links-hidden", false)
+
+    let elements = Array.from(document.getElementsByClassName("contact-fixed")[0].children)
+
+    elements.slice(0,3).forEach((el) => {
+        el.style.display = "block"
+        // el.classList.remove("slide-right")
+        el.classList.add("slide-left")
+    })
+    elements[3].classList.add("do-a-spin")
+    // elements[3].classList.add("do-a-opposite-spin")
+}
+
 function imageZoom(imgName, vertical = false) {
     console.log(screen.width);
     if (screen.width > 480) {
