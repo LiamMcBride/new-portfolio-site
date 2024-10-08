@@ -548,7 +548,7 @@ select {
 }
 
 .contact-fixed button svg {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 .do-a-spin {
