@@ -296,6 +296,7 @@ h2 {
 .project-img-holder {
     overflow: hidden;
     width: 100%;
+    min-width: 600px;
     display: flex;
     justify-content: center;
     background-color: var(--lightGray);
