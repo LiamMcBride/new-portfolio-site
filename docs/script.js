@@ -483,11 +483,15 @@ let detail_project = null
 document.addEventListener("animationend", (event) => {
     if(event.animationName === "slideRight"){
         event.target.style.display = "none"
-        event.target.classList.remove("slide-right")
+        event.target.classList.remove("slide-right-5")
+        event.target.classList.remove("slide-right-6")
+        event.target.classList.remove("slide-right-7")
     }
     if(event.animationName === "slideLeft"){
         event.target.style.display = "block"
-        event.target.classList.remove("slide-left")
+        event.target.classList.remove("slide-left-5")
+        event.target.classList.remove("slide-left-6")
+        event.target.classList.remove("slide-left-7")
     }
     if(event.animationName === "doASpin"){
         event.target.style.transform = "rotate(180deg)"
@@ -519,11 +523,9 @@ function hideOrShowSocials() {
 
 function onSocialsLoad(page) {
     if(page != 0){
-        console.log(localStorage.getItem("links-hidden"))
         localStorage.getItem("links-hidden") === "true" ? null : showElementsNoAnimation()
     }
     else {
-        console.log(localStorage.getItem("links-hidden"))
         localStorage.getItem("links-hidden") === "true" ? null : showElements()
     }
 }
@@ -544,8 +546,8 @@ function hideElements() {
 
     let elements = Array.from(document.getElementsByClassName("contact-fixed")[0].children)
 
-    elements.slice(0,3).forEach((el) => {
-        el.classList.add("slide-right")
+    elements.slice(0,3).forEach((el, i) => {
+        el.classList.add(`slide-right-${5 + i}`)
     })
     elements[3].classList.add("do-a-opposite-spin")
 
@@ -556,17 +558,16 @@ function showElements() {
 
     let elements = Array.from(document.getElementsByClassName("contact-fixed")[0].children)
 
-    elements.slice(0,3).forEach((el) => {
+    elements.slice(0,3).forEach((el, i) => {
         el.style.display = "block"
-        // el.classList.remove("slide-right")
-        el.classList.add("slide-left")
+        // el.classList.remove("slide-right-5")
+        el.classList.add(`slide-left-${5 + i}`)
     })
     elements[3].classList.add("do-a-spin")
     // elements[3].classList.add("do-a-opposite-spin")
 }
 
 function imageZoom(imgName, vertical = false) {
-    console.log(screen.width);
     if (screen.width > 480) {
         let zoomBox = document.getElementById("image-zoom")
         zoomBox.innerHTML = `
@@ -583,7 +584,6 @@ function imageUnzoom() {
 function showFilters() {
     let filter_div = document.getElementById("filter-div")
     let show_filter_btn = document.getElementById("show-filter-btn");
-    console.log(filter_div.style.display)
     if (filter_div.style.display == "none") {
         filter_div.style.display = "flex"
         show_filter_btn.style.display = "none";
@@ -622,7 +622,6 @@ function generatePreviews() {
     }
 
     // projects_data.forEach(proj => {
-    //     console.log(proj)
     //     htmlString += `
     //     <div class="preview-div" onclick="location.href='projects.html#project_${proj["id"]}'">
     //         <img class="project-image" src="${proj["image"]}">
@@ -634,7 +633,6 @@ function generatePreviews() {
     // })
     htmlString += `<div style="display: block; height: 500px">`
     document.getElementById("main").innerHTML += htmlString;
-    console.log(htmlString)
 }
 
 function assembleFilters() {
@@ -797,7 +795,6 @@ function generateVisualTags(data) {
 }
 
 function tagClick(cat, type) {
-    console.log(`cat: ${cat} type: ${type}`)
 
     let filter_div = document.getElementById("filter-div")
     if (filter_div.style.display == "none") {

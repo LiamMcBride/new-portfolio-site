@@ -513,12 +513,26 @@ select {
     z-index: 10;
 }
 
-.slide-right {
+.slide-right-5 {
+    animation: slideRight 0.3s; 
+}
+
+.slide-left-5 {
+    animation: slideLeft 0.3s; 
+}
+.slide-right-6 {
     animation: slideRight 0.5s; 
 }
 
-.slide-left {
+.slide-left-6 {
     animation: slideLeft 0.5s; 
+}
+.slide-right-7 {
+    animation: slideRight 0.7s; 
+}
+
+.slide-left-7 {
+    animation: slideLeft 0.7s; 
 }
 
 @keyframes slideRight{ 
