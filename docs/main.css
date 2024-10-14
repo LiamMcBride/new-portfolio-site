@@ -138,6 +138,7 @@ li{
 
 main{
     display: flex;
+    flex-direction: row;
     width: 100%;
     justify-content: space-between;
     /* gap: 40px; */
@@ -227,7 +228,7 @@ a:hover {
 
 .not-inline{
     display: inline;
-    width: 325px;
+    width: 45%;
 }
 
 h1 {
