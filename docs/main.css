@@ -182,6 +182,15 @@ a:hover {
 
 }
 
+@keyframes leftSlide {
+    0% { transform: translate(-1000px,0); }
+    100% { transform: translate(0,0); }
+  }
+@keyframes comeUp {
+    0% { transform: translate(0,1000px); }
+    100% { transform: translate(0,0); }
+  }
+
 .title-page-introduction-header{
 
     /* padding-top: 100px; */
@@ -198,6 +207,10 @@ a:hover {
 
 }
 
+.title-page-introduction-header p {
+    animation: comeUp 1.1s;
+}
+
 .title-page-title-photo-div {
     display: flex;
     flex-direction: row;
@@ -210,6 +223,9 @@ a:hover {
     height: 125px;
     overflow: hidden;
     border-radius: 50%;
+
+    animation: fadeIn 1s;
+
 }
 
 #profile-photo {
@@ -320,7 +336,7 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     padding: 16px;
-    animation: fadeIn .35s
+    animation: fadeIn .35s;
 }
 
 @keyframes fadeIn {
@@ -382,11 +398,13 @@ h2 {
     margin-bottom: 0px;
     /* font-size: 2em; */
     color: var(--white);
+    animation: fadeIn 1s;
 }
 
 .name-title{
     margin: 0px;
     font-size: 4em;
+    animation: leftSlide 1s;
 }
 
 /* .side-bar{
