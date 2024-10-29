@@ -478,7 +478,17 @@ let tags_assembled = false
 let project_root = null
 let current_preview_index = 0
 let detail_project = null
-// project_root.innerHTML = assmbleProjectsHTML(projects_data)
+
+window.setInterval(() => {
+    const left = document.getElementsByClassName("profile-photo-left")[0]
+    const right = document.getElementsByClassName("profile-photo-right")[0]
+    const center = document.getElementsByClassName("profile-photo-center")[0]
+
+    left.classList.add("animate-photo-left")
+    right.classList.add("animate-photo-right")
+    center.classList.add("animate-photo-center")
+      
+}, 6000)
 
 document.addEventListener("animationend", (event) => {
     if(event.animationName === "slideRight"){
@@ -500,6 +510,24 @@ document.addEventListener("animationend", (event) => {
     if(event.animationName === "doAOppositeSpin"){
         event.target.style.transform = ""
         event.target.classList.remove("do-a-opposite-spin")
+    }
+    if(event.animationName === "leftToRightPhoto"){
+        // event.target.style.transform = ""
+        event.target.classList.remove("profile-photo-left")
+        event.target.classList.remove("animate-photo-left")
+        event.target.classList.add("profile-photo-right")
+    }
+    if(event.animationName === "rightToMiddlePhoto"){
+        // event.target.style.transform = ""
+        event.target.classList.remove("profile-photo-right")
+        event.target.classList.remove("animate-photo-right")
+        event.target.classList.add("profile-photo-center")
+    }
+    if(event.animationName === "middleToLeftPhoto"){
+        // event.target.style.transform = ""
+        event.target.classList.remove("profile-photo-center")
+        event.target.classList.remove("animate-photo-center")
+        event.target.classList.add("profile-photo-left")
     }
 })
 

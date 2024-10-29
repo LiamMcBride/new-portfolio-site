@@ -219,21 +219,77 @@ a:hover {
 }
 
 .image-container {
-    width: 125px;
-    height: 125px;
+    /* width: 116px;
+    height: 175px;
     overflow: hidden;
-    border-radius: 50%;
-
+    border-radius: 10px; */
+    position: relative;
+    min-height: 175px;
+    max-width: 324px;
     animation: fadeIn 1s;
-
 }
 
-#profile-photo {
+/* 1.5 */
+/* 2/3 */
+.profile-photo {
+    width: 116px;
+    height: 175px;
+    border-radius: 10px;
+    position: absolute;
     /* width: 100px;
     height: 100px; */
-    object-fit: cover;
+    object-fit:fill;
     /* object-position: 10% 25%; */
-    transform: scale(.8) translate(-29%, -28%);
+    /* transform: scale(.8) translate(-29%, -28%); */
+}
+
+.profile-photo-left {
+    left: 50%;
+    transform: translate(-70%, 0) rotate(-15deg);
+    z-index: 0;
+    filter: brightness(30%);
+    /* animation: leftToRightPhoto 3s; */
+}
+.profile-photo-center {
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    /* animation: middleToLeftPhoto 3s; */
+}
+.profile-photo-right {
+    left: 50%;
+    transform: translate(-20%, 0) rotate(20deg);
+    z-index: 1;
+    background-color: red;
+    filter: brightness(50%);
+    /* animation: rightToMiddlePhoto 3s; */
+}
+
+.animate-photo-left {
+    animation: leftToRightPhoto 3s;
+}
+.animate-photo-right {
+    animation: rightToMiddlePhoto 3s;
+}
+.animate-photo-center {
+    animation: middleToLeftPhoto 3s;
+}
+
+@keyframes leftToRightPhoto {
+    0% { transform: translate(-70%, 0) rotate(-15deg); z-index: 0; filter: brightness(30%);}
+    70% { z-index: 0;}
+    100% { transform: translate(-20%, 0) rotate(20deg); z-index: 1; filter: brightness(50%);}
+}
+@keyframes rightToMiddlePhoto {
+    0% { transform: translate(-20%, 0) rotate(20deg); z-index: 1; filter: brightness(50%);}
+    35% { z-index: 2;}
+    100% { transform: translate(-50%, 0) rotate(0deg); z-index: 2; filter: brightness(100%);}
+}
+@keyframes middleToLeftPhoto {
+    0% { transform: translate(-50%, 0) rotate(0deg); z-index: 2; filter: brightness(100%);}
+    25% { transform: translate(-150%, 0); z-index: 2; filter: brightness(100%);}
+    26% { z-index: 1;}
+    100% { transform: translate(-70%, 0) rotate(-15deg); z-index: 0; filter: brightness(30%);}
 }
 
 .test-div{
@@ -307,8 +363,8 @@ h2 {
     opacity: .7;
 }
 
-.project-entry-div h2 {
-}
+/* .project-entry-div h2 {
+} */
 
 .project-img-holder {
     overflow: hidden;
