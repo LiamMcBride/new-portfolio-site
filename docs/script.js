@@ -488,7 +488,7 @@ window.setInterval(() => {
     right.classList.add("animate-photo-right")
     center.classList.add("animate-photo-center")
       
-}, 6000)
+},3000)
 
 document.addEventListener("animationend", (event) => {
     if(event.animationName === "slideRight"){

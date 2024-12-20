@@ -266,13 +266,13 @@ a:hover {
 }
 
 .animate-photo-left {
-    animation: leftToRightPhoto 3s;
+    animation: leftToRightPhoto 1s;
 }
 .animate-photo-right {
-    animation: rightToMiddlePhoto 3s;
+    animation: rightToMiddlePhoto 1s;
 }
 .animate-photo-center {
-    animation: middleToLeftPhoto 3s;
+    animation: middleToLeftPhoto 1s;
 }
 
 @keyframes leftToRightPhoto {
